@@ -92,7 +92,7 @@ class Chat{
     };
     
     sendError (ws, _message) {
-        let env = new Response("OK", this.nicknames, _message);
+        let env = new Response("NOK", this.nicknames, _message);
         console.log(env);
         ws.send(JSON.stringify(env));
     };
