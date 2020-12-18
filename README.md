@@ -31,4 +31,4 @@
 <img src="https://raw.githubusercontent.com/pcoliveira90/chat_simples/main/app/public/images/pagina_troca_mensagem.png" alt="Troca de mensagem" style="max-width:100%;">
 
 # Test
-Branch main-test  - versão beta (não concluída)
+
