@@ -1,0 +1,6 @@
+div.ex1 {
+    background-color: lightblue;
+    width: auto;
+    height: 75%;
+    overflow: scroll;
+  }
