@@ -32,11 +32,27 @@
             <div class="container" style="height: 350px;">
                <div class="row">
                   <div class="col col-lg-2">
-                     <!-- Empty column -->
+                     <div class="card">
+                        <div class="card-header">Room</div>
+                        <div class="card-body" style="padding: 10px;">
+                           <div id="current-room" class="small">Current: none</div>
+                           <hr>
+                           <select id="select-room" class="custom-select" style="margin-bottom:10px;">
+                              <option value="Lobby">Lobby</option>
+                           </select>
+                           <input id="input-room-name" type="text" class="form-control" placeholder="New room" style="margin-bottom:8px;">
+                           <a onclick="sendJoinRoom()" href="#" class="btn btn-sm btn-primary" style="margin-right:4px;">Join</a>
+                           <a onclick="sendCreateRoom()" href="#" class="btn btn-sm btn-success" style="margin-right:4px;">Create</a>
+                           <a onclick="sendLeaveRoom()" href="#" class="btn btn-sm btn-warning">Leave</a>
+                        </div>
+                     </div>
                   </div>
                   <div id="messages-box" class="col-8"></div>
                   <div class="col col-lg-2">
-                     <!-- Empty column -->
+                     <div class="card">
+                        <div class="card-header">Users in room</div>
+                        <ul id="room-users" class="list-group list-group-flush"></ul>
+                     </div>
                   </div>
                </div>
             </div>
