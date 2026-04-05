@@ -109,16 +109,16 @@ class Chat{
             this.sendAll (_message,ws);
         }
     }
-    sendSpecific (_message,ws) {
-        let env = new Response("OK", this.nicknames, '<b>'+ _message.nickname+'</b> says to <i>'+ _message.receiver +'</i> : '+_message.message);
+   sendSpecific (_message,ws) {
+    let env = new Response("OK", this.nicknames, '<b>'+ _message.nickname+'</b> says to <i>'+ _message.receiver +'</i> : '+_message.message);
 
-        this.clients.forEach((client) => {
-            if (client.readyState === 1 && client.username === _message.receiver) {
-                client.send(JSON.stringify(env));
-                ws.send(JSON.stringify(env));
-            }
-        });
-    }
+    this.clients.forEach((client) => {
+        if (client.readyState === 1 && client.username === _message.nickname) {
+            client.send(JSON.stringify(env));
+            ws.send(JSON.stringify(env));
+        }
+    });
+}
     
     
 }
